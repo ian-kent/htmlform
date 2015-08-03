@@ -25,6 +25,11 @@ func Map(args ...interface{}) (map[string]interface{}, error) {
 	return m, nil
 }
 
+// Arr returns a slice for a given argument list
+func Arr(args ...interface{}) []interface{} {
+	return args
+}
+
 // Extend extends the target map with the provided arg pairs
 func Extend(target map[string]interface{}, args ...interface{}) (map[string]interface{}, error) {
 	if len(args)%2 != 0 {

@@ -45,6 +45,17 @@ func TestMap(t *testing.T) {
 	})
 }
 
+func TestArr(t *testing.T) {
+	Convey("Arr should return a slice", t, func() {
+		a := Arr("a", "b", "c")
+		So(a, ShouldNotBeNil)
+		So(len(a), ShouldEqual, 3)
+		So(a[0], ShouldEqual, "a")
+		So(a[1], ShouldEqual, "b")
+		So(a[2], ShouldEqual, "c")
+	})
+}
+
 func TestExtend(t *testing.T) {
 	Convey("Extend should extend a map", t, func() {
 		m0 := map[string]interface{}{"a": 1}
